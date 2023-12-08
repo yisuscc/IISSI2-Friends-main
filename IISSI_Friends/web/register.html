@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8">
+	<title>Registro</title>
+	<link rel="icon" href="/images/favicon.ico">
+	<script src="/js/utils/include.js"> </script> <!-- Para hacer includes de código HTML en esta página -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<link rel="stylesheet " href="/css/font-awesome.min.css">
+	<script src="/js/libs/jquery-3.4.1.min.js"> </script>
+	<script src="/js/libs/popper.min.js"> </script>
+	<script src="/js/libs/bootstrap.min.js"> </script>
+	<script src="js/libs/axios.min.js"></script> <!-- Librería Axios para peticiones Ajax a la API Rest -->
+	<script src="/js/register2.js" type="module"> </script>
+	<script src="/js/cpmunprov.js" type="module"> </script>
+	<script src="/js/header.js" type="module"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</head>
+
+<body>
+	<div id="page-header"></div>
+	<div id="errors"></div>
+	<script> include("header.html", "#page-header");</script>
+	<div class="container">
+		<h1 class="col-md text-center"><i class="fa fa-user-plus" aria-hidden="true"></i>
+			<p style="text-align:center">¿Cómo registrarse?</p>
+		</h1>
+		<p class="col-md text left"><b>¡Muy sencillo! Tan sólo tiene que rellenar los siguientes datos: </b></p>
+		<p class="col-md text left">(*) Campo obligatorio </p>
+		<div class="row">
+		</div>
+		
+		<form id="register-form">
+			<fieldset>
+				<legend><b>Datos de la página</b></legend>
+				<div class="col-md">
+					<div class="form-group">
+						<label for="username-input">(*) Nombre de usuario:</label>
+						<input type="text" class="form-control" id="username-input" name="username" minlength="4"
+							maxlength="10" placeholder="Usuario" required>
+					</div>
+					<div class="form-group">
+						<label for="email-input">(*) Email:</label>
+						<input type="email" class="form-control" id="email-input" name="email"
+							placeholder="ejemplo@gmail.com" required>
+					</div>
+					<div class="form-group">
+						<label for="password-input">(*) Contraseña:</label>
+						<input type="password" class="form-control" id="password-input" name="password" minlength="8"
+							maxlength="15" placeholder="Contraseña" required>
+					</div>
+					<div class="form-group">
+						<label for="password2-input">(*) Repetir contraseña:</label>
+						<input type="password" class="form-control" id="password2-input" name="password2" minlength="8" maxlength="15"
+							placeholder="Repita la contraseña" required>
+					</div> 
+			</fieldset>
+
+			<fieldset>
+				<legend><b>Datos personales</b></legend>
+				<div class="col-md">
+
+					<div class="form-group">
+						<label>(*) Fecha de nacimiento:</label>
+						<input type="date" class="form-control" id="birthdate-input"
+							name="dateOfBirth" required>
+					</div>
+
+					<div class="form-group">
+						<label>(*) Género</label>
+						<select name="gender" required>
+							<option value="male">Masculino</option>
+							<option value="female">Femenino</option>
+							<option value="other">Otro</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label>(*) Peso:</label>
+						<input name="wheight" type="number" value="75" placeholder="En kilogramos" required>
+					</div>
+					<div class="form-group">
+						<label>(*) Altura:</label>
+						<input name="height" type="number" value="170" placeholder="En centímetros" required>
+					</div>
+					<div class="form-group">
+						<label>Color de pelo</label>
+						<select name="hairColor" id="ColorPelo" required>
+							<option value="black" selected>Negro</option>
+							<option value="brunette">Castaño</option>
+							<option value="blonde">Rubio</option>
+							<option value="ginger">Rojo</option>
+							<option value="white">Blanco</option>
+							<option value="gray">Gris</option>
+							<option value="other"> Otro</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label>Color de ojos</label>
+						<select name="eyeColor" id="ColorOjo">
+							
+							<option value="black">Negro</option>
+							<option value="brown">Marron</option>
+							<option value="blue">Azul</option>
+							<option value="green">Verde</option>
+							<option value="gray">Gris</option>
+							<option value="other">Otro</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label>Biografía:</label>
+						<textarea name="bio" cols="128" rows="8" maxlength="1023" placeholder="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit ve" required></textarea>
+					</div>
+					<div class="form-group">
+						<label>Dirección:</label>
+						<input name="address" type="text" class="form-control"
+							placeholder="Calle/plaza, piso, número, etc" required>
+					</div>
+					<div class="form-group">
+						<label>Provincia:</label>
+						<select id="selectProvincia" name="province"required></select>
+					</div>
+					<div class="form-group">
+						<label>Municipio:</label>
+						<select id="selectMunicipios" name="municipality" required></select>
+					</div>
+					<div class="form-group">
+						<label>Codigo postal:</label>
+						<select id="selectPostcode" name="postcode" required></select>
+					</div>
+				</div>
+			</fieldset>
+			<div class="row">
+				<div class="col-md text-center mb-2">
+					<button type="button" class="btn btn-danger" onclick="window.location.href=`index.html`">
+						<i class="fa fa-home"></i>Cancelar
+					</button>
+					<button type="submit" class="btn btn-primary">
+						<i class="fa fa-user-plus"></i>Registrarse
+					</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div id="page-footer"></div> <!-- Incrustar aquí pie común footer.html con JavaScript -->
+	<script>include("footer.html", "#page-footer");</script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+/* Formularios de registro y login */
+
+div.registerForm-container form{
+	border:1px solid silver;
+	padding: 1%;
+	border-radius: 10px;
+    margin:0 20% 0 20%
+}
+.input-group {
+	margin-bottom: 0.5em;
+}
+.input-group label {
+	display:block;
+	font-size: smaller;
+	font-weight:lighter;
+	font-style:italic
+}
+.input-group input {
+	width:98%;
+	border-radius:5px;
+	font-size: small
+}
+.input-group input[type=submit] {/* Estilo del botón de envío */
+	 margin:0 30% 0 30%;
+	 width:40%;
+	 padding:0.5em;
+	 color: black;
+	 background: url("https://img.icons8.com/material-two-tone/24/000000/submit-resume.png") no-repeat 95% 50% gainsboro;
+     background-size: 25px;
+     background-position: left center;
+	 text-align:right;	
+	 border: 1px dashed black;
+	 border-radius: 10px;
+}
+.input-group input[type=submit]:hover {
+	background-color: grey;	 
+}
+
+@media only screen and (max-width: 600px) { /* Móviles: Responsive */
+	div.registerForm-container form{
+		margin:0
+	}
+}

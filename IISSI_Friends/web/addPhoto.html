@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/libs/jquery-3.4.1.min.js"></script>
+    <script src="js/libs/popper.min.js"></script>
+    <script src="js/libs/bootstrap.min.js"></script>
+    <script type="module"  src="/js/header.js"></script>
+    <script type="module" src="/js/addPhoto.js"></script>
+    <script type="module" src="/js/picturesPropias.js"></script>
+    <script src="js/libs/axios.min.js"></script>
+    <script src="js/utils/include.js"></script>
+    <title>Añadir foto</title>
+</head>
+<body>
+    <div id="page-header"></div>
+    <script> include("header.html", "#page-header");</script>
+    <div class ="container-fluid"></div>
+    <h1 class ="text-center"> <i class="fa fa-camera-retro" aria-hidden="true"></i>
+    Añadir Foto</h1>
+    <div id ="errors"></div>
+    <form  id="formulario-foto">
+    <div class="form-group">
+    <label for="titulo">Título:</label>
+    <input type="text" required  class="form-control" id="titulo" placeholder="Título" name="name" title=" Escriba el Titulo">
+
+    </div>
+    <div class="form-group">
+    <label for="myURL">Seleciona Foto:</label>
+    <input type="url" class ="form-control"id="myURL" name="pictureURL" placeholder="https://fotosmolonas.com/xdd.jpg"> 
+
+    </div>
+    <div class="form-group">
+    <label for="comentario">Descripción</label>
+    <textarea class="form-control" maxlength="1024" required rows="5" id="comment"title="Escriba la descripción" placeholder="Lorem ipsum" name="description"
+     sunt in culpa qui officia deserunt mollit anim id est laborum."></textarea>
+    </div> 
+
+    <div class= "row">
+        <div class="col-md text-center mb-2">
+        <button type= "button" class= "btn btn-danger" onclick="window.history.back()">      
+            <i class="fa fa-ban" aria-hidden="true"></i>
+            Cancelar
+        </button>
+        <button type= "submit"  class= "btn btn-success">
+            <i class="fa fa-upload" aria-hidden="true"></i>
+        Subir
+        </button>
+        
+    </div>
+    </div>
+    </div>
+</form>
+<div id="page-footer"></div> 
+<script>include ("footer.html", "#page-footer");</script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+{
+    "getAll": {
+        "route": "/preferencecard",
+        "method": "GET",
+        "sql": "SELECT * FROM PreferenceCard",
+        "auth_required": false,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Gets all PreferenceCard"
+    },
+    "getById": {
+        "route": "/preferencecard/$cardId",
+        "method": "GET",
+        "sql": "SELECT * FROM PreferenceCard WHERE cardId = $cardId",
+        "auth_required": false,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Gets an entry from 'PreferenceCard' by its primary key"
+    },
+    "create": {
+        "route": "/preferencecard",
+        "method": "POST",
+        "sql": "INSERT INTO PreferenceCard(max_age, min_age, postcode, municipalityName, provinceName, max_height, min_height, max_weight, min_weight, userId, hairColor, eyeColor, gender) VALUES ($max_age, $min_age, $postcode, $municipalityName, $provinceName, $max_height, $min_height, $max_weight, $min_weight, $userId, $hairColor, $eyeColor, $gender)",
+        "auth_required": true,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Creates a new entry in 'PreferenceCard'",
+        "request_body_params": [
+            "max_age",
+            "min_age",
+            "postcode",
+            "municipalityName",
+            "provinceName",
+            "max_height",
+            "min_height",
+            "max_weight",
+            "min_weight",
+            "userId",
+            "hairColor",
+            "eyeColor",
+            "gender"
+        ]
+    },
+    "update": {
+        "route": "/preferencecard/$cardId",
+        "method": "PUT",
+        "sql": "UPDATE PreferenceCard SET max_age = $max_age, min_age = $min_age, postcode = $postcode, municipalityName = $municipalityName, provinceName = $provinceName, max_height = $max_height, min_height = $min_height, max_weight = $max_weight, min_weight = $min_weight, userId = $userId, hairColor = $hairColor, eyeColor = $eyeColor, gender = $gender WHERE cardId = $cardId",
+        "auth_required": true,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Updates an existing entry in 'PreferenceCard' by its primary key",
+        "request_body_params": [
+            "max_age",
+            "min_age",
+            "postcode",
+            "municipalityName",
+            "provinceName",
+            "max_height",
+            "min_height",
+            "max_weight",
+            "min_weight",
+            "userId",
+            "hairColor",
+            "eyeColor",
+            "gender"
+        ]
+    },
+    "delete": {
+        "route": "/preferencecard/$cardId",
+        "method": "DELETE",
+        "sql": "DELETE FROM PreferenceCard WHERE cardId = $cardId",
+        "auth_required": true,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Deletes an existing entry in 'PreferenceCard' by its primary key"
+    }
+}

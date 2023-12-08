@@ -1,0 +1,126 @@
+
+
+<!--    Es provisional, Está basado en esta plantilla libre: 
+    https://www.bootdey.com/snippets/view/chat-app
+-->
+<!DOCTYPE html>
+<html lang="es">
+     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="images/favicon.ico">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/chats.css">
+        <script type="module"  src="/js/header.js"></script>
+        <script src="js/libs/jquery-3.4.1.min.js"></script>
+        <script src="js/libs/popper.min.js"></script>
+        <script src="js/libs/bootstrap.min.js"></script>
+        <script src="js/libs/axios.min.js"></script>
+        <script src="js/utils/include.js"></script>
+        <title>chats</title>
+    </head>
+    <body>
+        <div id="page-header"></div>
+        <script> include("header.html", "#page-header");</script>
+        <div class ="container-fluid"></div>
+    <div class="container">
+<div class="row clearfix">
+    <div class="col-lg-12">
+        <div class="card chat-app">
+            <div id="plist" class="people-list">
+               <h3>Mis vinculos</h3>
+                <ul class="list-unstyled chat-list mt-2 mb-0">
+                    <li class="clearfix">
+                        
+
+                        <div class="about">
+                            <div class="name">Carla</div>
+                            <div class="boton"> <button type="button" class="btn btn-primary btn-sm">Nuevo chat</button></div>
+                                                                     
+                        </div>
+                    </li>
+                    <li class="clearfix active">
+                        <div class="about">
+                            <div class="name">Carmen</div>
+                            
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="about">
+                            <div class="name">Claudia</div>
+                            <div class="boton"> <button type="button" class="btn btn-primary btn-sm">Nuevo chat</button></div>
+                        </div>
+                    </li>                                    
+                    <li class="clearfix">
+                        <div class="about">
+                            <div class="name">Cristian</div>
+                            <div class="boton"> <button type="button" class="btn btn-primary btn-sm">Nuevo chat</button></div>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="about">
+                            <div class="name">Sandra</div>
+                            <div class="boton"> <button type="button" class="btn btn-primary btn-sm">Nuevo chat</button></div>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="about">
+                            <div class="name">Daniel</div>
+                            <div class="boton"> <button type="button" class="btn btn-primary btn-sm">Nuevo chat</button></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="chat">
+                <div class="chat-header clearfix">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <a href="javascript:void(0);" data-toggle="modal" data-target="#view_info">
+                            </a>
+                            <div class="chat-about">
+                                <h6 class="m-b-0">Carmen</h6>
+                                <div class=""> <button class="btn btn-danger btn-sml"> Cerrar conversación</button> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-history">
+                    <ul class="m-b-0">
+                        <li class="clearfix">
+                            <div class="message-data text-right">
+                                <div class="text-muted small text-nowrap mt-2">10:10am</div>
+                            </div>
+                            <div class="message other-message float-right"> Hola, Carmen. Como estás? </div>
+                        </li>
+                        <li class="clearfix">
+                            <div class="message-data text-left">
+                                <div class="text-muted small text-nowrap mt-2">10:12am</div>
+                            </div>
+                            <div class="message other-message float-left"> Hola, todo bien y tú? </div>
+                        </li>                             
+                        <li class="clearfix">
+                            <div class="message-data">
+                            </div>
+                            <div class="message my-message">Al final vamos a tomar algo hoy?</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="chat-message clearfix">
+                    <div class="input-group mb-0">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-send"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Escribir mensaje...">                                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div id="page-footer"></div> 
+<script>include ("footer.html", "#page-footer");</script>
+    </body>
+</html>

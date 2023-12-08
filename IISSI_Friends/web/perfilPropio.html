@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/libs/jquery-3.4.1.min.js"></script>
+  <script src="js/libs/popper.min.js"></script>
+  <script src="js/libs/bootstrap.min.js"></script>
+  <script src="js/libs/axios.min.js"></script>
+  <script src="js/utils/include.js"></script>
+  <script type="module"  src="/js/header.js"></script>
+  <script type="module" src="js/perfilPropio.js"></script>
+  <script type="module" src="/js/api/_pictures.js"></script>
+  <script type="module" src="js/renderers/picturesPropias.js"></script>
+  <a class="navbar-brand" id="navbar-title" href="#"></a>
+  <title>Mi perfil</title>
+
+  <!-- Bootstrap core CSS -->
+
+
+  <!-- Custom styles for this template -->
+
+</head>
+
+<body>
+  <header></header>
+  <div id="page-header"></div>
+  <script> include("header.html", "#page-header");</script>
+  <div id="errors"></div>
+  <form id="form-photo-upload"></form>
+  <div class="container-fluid"></div>
+  <main role="main">
+
+
+    <section class="jumbotron text-center" id ="" >
+      <div id="jumboUserPropio" ></div>
+      <div id="aficionesUserPropioJumbo"></div>
+   
+    </section>
+
+    <div class="album py-5 bg-light">
+      <div class="container">
+
+        <div class="row" id="">
+          <div id="galeriaPropia"></div>
+          
+          
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <div id="page-footer"></div>
+  <script> include("footer.html", "#page-footer");</script>
+
+
+
+</body>
+
+</html>

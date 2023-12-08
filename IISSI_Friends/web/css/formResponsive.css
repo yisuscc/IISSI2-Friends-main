@@ -1,0 +1,34 @@
+/*
+    Estilo del sitio
+*/
+
+div.registerForm-container form{
+	border:1px solid silver;
+	padding: 1%;
+	border-radius: 10px;
+    margin:0 20% 1% 20%
+}
+
+.input-group {
+	margin-bottom: 0.5em;
+}
+.input-group label {
+	display:block;
+	font-size: smaller;
+	font-weight:lighter;
+	font-style:italic
+}
+.input-group input {
+	width:98%;
+	border-radius:5px;
+	font-size: small
+}
+
+/* Diseño Responsive. Para dispositivos pequeños */
+@media only screen and (max-width: 600px) { /* Móviles: Responsive */
+	div.registerForm-container form {
+		margin:0 1% 1% 1%
+	}
+
+}
+

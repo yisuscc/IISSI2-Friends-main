@@ -1,0 +1,62 @@
+{
+    "getAll": {
+        "route": "/messages",
+        "method": "GET",
+        "sql": "SELECT * FROM messages",
+        "auth_required": false,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Gets all messages"
+    },
+    "getById": {
+        "route": "/messages/$messageId",
+        "method": "GET",
+        "sql": "SELECT * FROM messages WHERE messageId = $messageId",
+        "auth_required": false,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Gets an entry from 'messages' by its primary key"
+    },
+    "create": {
+        "route": "/messages",
+        "method": "POST",
+        "sql": "INSERT INTO messages(chatId, instant, text) VALUES ($chatId, $instant, $text)",
+        "auth_required": true,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Creates a new entry in 'messages'",
+        "request_body_params": [
+            "chatId",
+            "instant",
+            "text"
+        ]
+    },
+    "update": {
+        "route": "/messages/$messageId",
+        "method": "PUT",
+        "sql": "UPDATE messages SET chatId = $chatId, instant = $instant, text = $text WHERE messageId = $messageId",
+        "auth_required": true,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Updates an existing entry in 'messages' by its primary key",
+        "request_body_params": [
+            "chatId",
+            "instant",
+            "text"
+        ]
+    },
+    "delete": {
+        "route": "/messages/$messageId",
+        "method": "DELETE",
+        "sql": "DELETE FROM messages WHERE messageId = $messageId",
+        "auth_required": true,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Deletes an existing entry in 'messages' by its primary key"
+    }
+}

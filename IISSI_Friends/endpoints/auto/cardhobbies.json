@@ -1,0 +1,60 @@
+{
+    "getAll": {
+        "route": "/cardhobbies",
+        "method": "GET",
+        "sql": "SELECT * FROM CardHobbies",
+        "auth_required": false,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Gets all CardHobbies"
+    },
+    "getById": {
+        "route": "/cardhobbies/$CardHobbyId",
+        "method": "GET",
+        "sql": "SELECT * FROM CardHobbies WHERE CardHobbyId = $CardHobbyId",
+        "auth_required": false,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Gets an entry from 'CardHobbies' by its primary key"
+    },
+    "create": {
+        "route": "/cardhobbies",
+        "method": "POST",
+        "sql": "INSERT INTO CardHobbies(hobbyId, CardId) VALUES ($hobbyId, $CardId)",
+        "auth_required": true,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Creates a new entry in 'CardHobbies'",
+        "request_body_params": [
+            "hobbyId",
+            "CardId"
+        ]
+    },
+    "update": {
+        "route": "/cardhobbies/$CardHobbyId",
+        "method": "PUT",
+        "sql": "UPDATE CardHobbies SET hobbyId = $hobbyId, CardId = $CardId WHERE CardHobbyId = $CardHobbyId",
+        "auth_required": true,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Updates an existing entry in 'CardHobbies' by its primary key",
+        "request_body_params": [
+            "hobbyId",
+            "CardId"
+        ]
+    },
+    "delete": {
+        "route": "/cardhobbies/$CardHobbyId",
+        "method": "DELETE",
+        "sql": "DELETE FROM CardHobbies WHERE CardHobbyId = $CardHobbyId",
+        "auth_required": true,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Deletes an existing entry in 'CardHobbies' by its primary key"
+    }
+}

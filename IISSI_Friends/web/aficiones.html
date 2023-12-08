@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="images/favicon.ico">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <!-- <link rel="stylesheet" href="css/style.css"> -->
+        <script type="module" src="/js/header.js"></script>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="js/libs/jquery-3.4.1.min.js"></script>
+        <script src="js/libs/popper.min.js"></script>
+        <script src="js/libs/bootstrap.min.js"></script>
+        <script src="js/libs/axios.min.js"></script>
+        <script src="js/utils/include.js"></script>
+        <script src="js/aficiones.js" type="module"></script>
+        
+        <title>Aficiones</title>
+        </head>
+    <body>
+        <div id="page-header"></div>
+        <section class="py-5">
+            <div class="container">
+                <div class="w-50 mx-auto">
+                    <div class="text-center mb-4">
+                    <h3>Aficiones</h3>
+                    <p class="text-muted"></p>
+                    <div class="col-md">
+                        <div class="form-group">
+                            <label for="aficion1">Aquí puedes añadir una afición nueva a la Base de Datos</label>
+                            <input type="text" class="form-control" id="aficion1" name="aficion1">
+                    </div>
+                    <button type="button" class="btn btn-primary" id="buttonadd">añadir
+                    </button>
+
+                    
+                </div>
+                <br>
+                <label for="AficionSelector"">Aquí puedes seleccionar una afición preexistente de la base de datos </label>
+                <div class="card rounded mb-3" id = "AficionSelector">
+                  
+                    <form name="forms">
+                        <div id="hobbyCheck"></div>
+                        <br>
+                        <div class="row">
+                            <div class="col-md text-center mb-2">
+                                <button type="button" class="btn btn-danger" onclick="window.location.href=`index.html`">Cancelar
+                        </button>
+                        <button type="submit" class="btn btn-primary" id="save">Guardar
+                        </button>
+                    </div>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+
+            <br>
+            <section class="py-5">
+                <div class="container">
+                    <div class="w-50 mx-auto">
+                        <div class="text-center mb-4">
+                            <div class="form-group">
+
+             </div>
+
+         </div>
+
+     </div>
+           </div>
+        </div>
+    </div>
+</div>
+
+            <br>
+            <form>
+
+            </div>
+        </form>
+    </section>
+        <div id="page-footer"></div>
+        <script>
+            include("header.html", "#page-header");
+            include("footer.html", "#page-footer");
+        </script>
+        
+        
+
+    </body>
+</html>

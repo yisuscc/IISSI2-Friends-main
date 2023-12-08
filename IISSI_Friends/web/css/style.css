@@ -1,0 +1,16 @@
+@import "cabeceras.css";
+:root{
+    --color-primary: #1a1a1a;
+    --cold-grey-x: #f0f0f0;
+    --color-gey-xx: #cccccc;
+    --color-white: #ffffff;
+}
+body{
+    font-family: 'Titillium web', sans-serif;
+    background-color: var(--cold-grey-x);
+}
+form-group{
+    display: block;
+    position: relative;
+    cursor: pointer;
+}

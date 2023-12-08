@@ -1,0 +1,33 @@
+/*
+    Estilo del sitio
+*/
+
+/*	Cabeceras  */
+body { 
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	padding:1%;
+}
+div.title-block, footer {
+	text-align: center;
+	background-color: gainsboro;
+	font-weight: lighter;
+	padding:1%
+}
+#title {
+	font-size: 200%;
+	text-decoration: none;
+	margin: 0;
+	padding:0
+}
+#subtitle {
+	font-style: italic;
+	font-size:smaller;
+	margin:0;
+}
+#indexTitle {
+	text-align:center;
+    margin: .5em 0 .5em 0
+}
+footer {
+	margin-top:1%
+}

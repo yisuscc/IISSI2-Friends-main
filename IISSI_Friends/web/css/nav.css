@@ -1,0 +1,21 @@
+
+div-navigation{
+    margin-top: .5em;
+}
+
+div.navigation a:link, div.navigation a:visited, a#upload:link,a#upload:visited,
+div.photo-edit-block button{
+    border: 1px dashed black;
+    padding: .15em;
+    color: black;
+    background-color:  gainsboro;
+    text-decoration: none;
+display: inline-block;
+min-width: 100px;
+border-radius: 10px;
+font-size:small ;
+}
+div.navigation a:hover, a#upload:hover,div.photo-edit-block button:hover{
+    color: white;
+    background-color: grey;
+}

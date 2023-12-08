@@ -1,0 +1,70 @@
+{
+    "getAll": {
+        "route": "/links",
+        "method": "GET",
+        "sql": "SELECT * FROM Links",
+        "auth_required": false,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Gets all Links"
+    },
+    "getById": {
+        "route": "/links/$linkId",
+        "method": "GET",
+        "sql": "SELECT * FROM Links WHERE linkId = $linkId",
+        "auth_required": false,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Gets an entry from 'Links' by its primary key"
+    },
+    "create": {
+        "route": "/links",
+        "method": "POST",
+        "sql": "INSERT INTO Links(userId1, userId2, request_date, acceptance_date, revocation_request_date, revocation_acceptance_date, isActive) VALUES ($userId1, $userId2, $request_date, $acceptance_date, $revocation_request_date, $revocation_acceptance_date, $isActive)",
+        "auth_required": true,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Creates a new entry in 'Links'",
+        "request_body_params": [
+            "userId1",
+            "userId2",
+            "request_date",
+            "acceptance_date",
+            "revocation_request_date",
+            "revocation_acceptance_date",
+            "isActive"
+        ]
+    },
+    "update": {
+        "route": "/links/$linkId",
+        "method": "PUT",
+        "sql": "UPDATE Links SET userId1 = $userId1, userId2 = $userId2, request_date = $request_date, acceptance_date = $acceptance_date, revocation_request_date = $revocation_request_date, revocation_acceptance_date = $revocation_acceptance_date, isActive = $isActive WHERE linkId = $linkId",
+        "auth_required": true,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Updates an existing entry in 'Links' by its primary key",
+        "request_body_params": [
+            "userId1",
+            "userId2",
+            "request_date",
+            "acceptance_date",
+            "revocation_request_date",
+            "revocation_acceptance_date",
+            "isActive"
+        ]
+    },
+    "delete": {
+        "route": "/links/$linkId",
+        "method": "DELETE",
+        "sql": "DELETE FROM Links WHERE linkId = $linkId",
+        "auth_required": true,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Deletes an existing entry in 'Links' by its primary key"
+    }
+}

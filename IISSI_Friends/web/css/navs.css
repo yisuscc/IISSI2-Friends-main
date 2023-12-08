@@ -1,0 +1,28 @@
+/*	Barra de navegación  */
+/*  Botones */
+div.navigation {
+    margin-top: .5em;
+}
+div.navigation a:link,div.navigation a:visited, a#upload:link,a#upload:visited,button.btnEdit, button.btnDelete {
+	border: 1px dashed black;
+    padding: .15em;
+    color: black;
+	background-color: gainsboro;
+	text-decoration: none;
+	display: inline-block;
+	min-width: 100px;
+	border-radius: 10px;
+    font-size: small
+}
+div.navigation a:hover, a#upload:hover, button.btnEdit:hover, button.btnDelete:hover {
+	color: white;
+	background-color:grey
+}
+button.btnEdit:before {
+	content:'✎ ';
+	font-size:larger
+}
+button.btnDelete:before {
+	content:'⌫ ';
+	font-size:larger
+}

@@ -1,0 +1,33 @@
+/* Grid  RWD*/
+
+.gallery-container { /* Dispositivo genérico */
+    display:grid;
+    grid-template-columns: 33% 33% 33%; /* 99% */
+	grid-gap: .5% 						/* 1% restante*/
+}
+@media only screen and (max-width: 600px) { /* Móviles: Responsive */
+	.gallery-container {
+		grid-template-columns: 100%;
+	}
+}
+.photo-block {
+    text-align:center;
+    border: 1px solid slategray;
+    border-radius: 10px;
+	padding:.2em
+}
+div.photo-header-block {
+    font-size: large
+}
+h2.photo-title {
+    text-decoration: underline;
+    margin:0;
+    padding:0
+}
+h3.photo-score {
+    font-size:smaller;
+}
+img.photo-image {
+    max-height: auto;
+	max-width: 96%;
+}

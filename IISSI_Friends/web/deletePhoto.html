@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/libs/jquery-3.4.1.min.js"></script>
+    <script src="js/libs/popper.min.js"></script>
+    <script src="js/libs/bootstrap.min.js"></script>
+    <script type="module"  src="/js/header.js"></script>
+    <script type="module" src="/js/deletePhoto.js"></script>
+
+    <script src="js/libs/axios.min.js"></script>
+    <script src="js/utils/include.js"></script>
+    <title>Añadir foto</title>
+</head>
+<body>
+    <div id="page-header"></div>
+    <script> include("header.html", "#page-header");</script>
+    <div class ="container-fluid">
+<h1 class ="text-center">  <i class="fa fa-trash" aria-hidden="true"></i>
+    Borrar  foto
+    <i class="fa fa-camera-retro" aria-hidden="true"></i>
+</h1>
+<h3 class="text-center">¿ Realmente quieres borrar a esta pobre e inocente foto?</h3>
+
+<div id="cardPhotoDelete" align="center">
+
+</div>
+
+
+<div class="btn-group d-flex  align-items-center "  >
+<button id="btnCancelar" class="btn btn-success" onclick="window.location.href ='perfilPropio.html'"> Cancelar</button>
+<button id="btnBorrar" class="btn btn-danger"> Borrar</button>
+</div>
+
+
+
+
+</div>
+<div id="page-footer"></div> 
+<script>include ("footer.html", "#page-footer");</script>
+</body>
+</html>

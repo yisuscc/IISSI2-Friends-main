@@ -1,0 +1,64 @@
+{
+    "getAll": {
+        "route": "/chats",
+        "method": "GET",
+        "sql": "SELECT * FROM Chats",
+        "auth_required": false,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Gets all Chats"
+    },
+    "getById": {
+        "route": "/chats/$chatId",
+        "method": "GET",
+        "sql": "SELECT * FROM Chats WHERE chatId = $chatId",
+        "auth_required": false,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Gets an entry from 'Chats' by its primary key"
+    },
+    "create": {
+        "route": "/chats",
+        "method": "POST",
+        "sql": "INSERT INTO Chats(linkId, start_date, end_date, new_message) VALUES ($linkId, $start_date, $end_date, $new_message)",
+        "auth_required": true,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Creates a new entry in 'Chats'",
+        "request_body_params": [
+            "linkId",
+            "start_date",
+            "end_date",
+            "new_message"
+        ]
+    },
+    "update": {
+        "route": "/chats/$chatId",
+        "method": "PUT",
+        "sql": "UPDATE Chats SET linkId = $linkId, start_date = $start_date, end_date = $end_date, new_message = $new_message WHERE chatId = $chatId",
+        "auth_required": true,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Updates an existing entry in 'Chats' by its primary key",
+        "request_body_params": [
+            "linkId",
+            "start_date",
+            "end_date",
+            "new_message"
+        ]
+    },
+    "delete": {
+        "route": "/chats/$chatId",
+        "method": "DELETE",
+        "sql": "DELETE FROM Chats WHERE chatId = $chatId",
+        "auth_required": true,
+        "allowed_roles": [
+            "*"
+        ],
+        "description": "Deletes an existing entry in 'Chats' by its primary key"
+    }
+}
